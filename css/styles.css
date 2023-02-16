@@ -1,0 +1,258 @@
+/* styles sheet */
+
+body{
+    /* --color-dark: #4e4ab2a0; */
+    --color-dark: #4e4ab2c2;
+    --color-light: #938baee2;
+    --color-text: #4d0080ea;
+    background-color: var(--color-dark);
+    background-image: url("https://transparenttextures.com/patterns/black-linen.png");
+    color: white;
+}
+
+body.alt-theme{
+    --color-dark: rgba(18, 27, 125, 0.713);
+    --color-light: rgba(82, 91, 157, 0.713);
+    --color-text: rgba(18, 27, 125, 0.713);
+}
+
+h1{
+    text-align:center;
+    padding: 1.5rem;
+    font-size: 4rem;
+    font-style: oblique 40deg;
+}
+
+.color-theme-button{
+    /* position: absolute;
+    left: 5%; */
+    position: relative;
+    right: 1rem;
+    top: 0.5rem;
+    border: solid;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    color: var(--color-dark);
+}
+
+.color-theme-button:hover{
+    color: white;
+    background-color: var(--color-dark);
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.to-do-container{
+    /* width: fit-content;
+    height: fit-content; */
+    border: 2mm ridge white;
+    border-radius: 2rem; 
+    /* background-color:#938baee2; */
+    background-color: var(--color-light);
+    padding: 1rem;
+    margin: 1rem auto;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.to-do-title{
+    text-align:center;
+    font-size: 2.5rem;
+    width: 90%;
+    margin: 0 auto 0.5rem;
+}
+
+.list{
+    list-style: none;
+}
+
+.list-item{
+    margin: 1rem 0;
+}
+
+.priority-list-item{
+    color: red;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.task{
+    display: inline-block;
+    max-width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sub-task{
+    display: inline-block;
+    max-width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sub-list{
+    font-size: 0.9rem;
+    margin-top: -0.1rem;
+}
+
+.task:hover{
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.fa-check{
+    position: absolute;
+    right: 12%;
+}
+
+.fa-trash{
+    position: absolute;
+    right: 8%;
+}
+
+.fa-solid:hover{
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.due-date{
+    position: absolute;
+    right: 20%;
+}
+
+.new-submission-container{
+    border-radius: 2rem; 
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    padding: 2rem;
+}
+
+.due-date-submission-container{
+    display: inline-block;
+    position: relative;
+    bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.btn-lg{
+    width: 15rem;
+    background-color:var(--color-dark);
+    background-image: url("https://transparenttextures.com/patterns/black-linen.png");
+    color: white;
+    border-color: lavender;
+    border-radius: 2rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.btn-lg:hover{
+    background-image: none;
+    /* background-color: transparent; */
+}
+
+textarea{
+    height: 4rem;
+    width: 18rem;
+    border: none;
+    background-color: var(--color-light);
+    display: inline-block;
+    color: white;
+    outline-color: white;
+    resize: none;
+    margin: auto;
+}
+
+.temp-input{
+    border: none;
+    /* background-color: #4e4ab2a0;
+    color: white; */
+    outline: none;
+    border-radius: 1rem;
+    background-color: white;
+    color: var(--color-dark);
+    font-weight: bolder;
+}
+
+.temp-button{
+    /* background-color: #4e4ab2a0;
+    color: white; */
+    background-color: white;
+    color: var(--color-dark);
+    border-color: lavender;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-left: 1rem;
+    font-weight:bolder;
+}
+
+.temp-button:hover{
+    background-color:var(--color-dark);
+    color: white;
+}
+
+#due-date-input{
+    margin-top: 1rem;
+    border: none;
+    background-color:var(--color-light);
+    color: white;
+    /* color-scheme: dark; */
+    padding: 0.5rem;
+    outline-color: white;
+    display: block;
+    margin: auto;
+}
+
+#due-date-input{
+    cursor: text;
+}
+
+.due-date-label{
+    display: block;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.713);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+::-webkit-calendar-picker-indicator:hover {
+    cursor:pointer;
+}
+
+.error-message{
+    color: red;
+    position: relative;
+    bottom: 4.8rem;
+}
+
+/***********Media queries (phones, small devices) *************/
+@media screen and (max-width: 600px){
+    .due-date-label{
+        display:inline;
+    }
+
+    #due-date-input{
+        display: inline;
+        margin-top: 1rem;
+        margin-right: 2rem;
+    }
+
+}
+

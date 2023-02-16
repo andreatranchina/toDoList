@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <!--Title -->
+    <title>To Do List</title>
+
+    <!-- Fonts and FontAwesome Icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@100;400;700;900&family=Sacramento&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecc8dec0f1.js" crossorigin="anonymous"></script>
+
+    <!-- CSS stylesheet, Bootstrap and favicon icon-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Bootstrap javaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>  
+</head>
+<body class="alt-them">
+    <h1><button class="color-theme-button">*</button>Remember To Do:</h1>
+
+    <div class="container-fluid">
+
+            <div class="to-do-container">
+                <h3 class="to-do-title">Tasks & Due Dates</h3>      
+                <ul class="list">
+                    <li class="list-item">
+                        <span class="task">Buy groceries</span>
+                        <span class="due-date">2023-02-28</span>
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-trash"></i>
+                        <ul class="sub-list">
+                            <li class="sub-task">- Milk</li>
+                            <i class="fa-solid fa-check"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </ul>
+                        <ul class="sub-list">
+                            <li class="sub-task">- Bread</li>
+                            <i class="fa-solid fa-check"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </ul>                        
+                    </li>
+                    <li class="list-item">
+                        <span class="task completed">Finish my to do list website</span>
+                        <span class="due-date completed">2023-03-01</span>
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-trash"></i> 
+                    </li>
+                    <li class="priority-list-item list-item"> 
+                        <span class="task">Book a flight for the summer</span>
+                        <span class="due-date">2023-03-04</span>
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </li>
+                    <li class="list-item"> 
+                        <span class="task">Schedule dentist appointment</span>
+                        <span class="due-date">2023-03-04</span>
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </li>
+                </ul>
+            </div>
+        
+        <div class="new-submission-container">
+            <textarea type="text" id="task-input" placeholder="Enter next task to complete..."></textarea>
+            <div class="due-date-submission-container">
+                <label for="due-date" class="due-date-label">Select due date: </label>
+                <input type="date" id="due-date-input" max="2050-12-31"></input><span class="verify"></span>
+            </div>
+            <div class="buttons-container">
+                <button class="btn-lg" id="add-priority-task">Priority</button>
+                <button class="btn-lg" id="add-not-priority-task">Not Priority</button>
+            </div>
+        </div>   
+
+    </div>
+
+    <script src="index.js" charset="UTF-8"></script>
+
+    
+</body>
+</html>
