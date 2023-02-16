@@ -95,7 +95,7 @@ h3 {
 
 .sub-task{
     display: inline-block;
-    max-width: 55%;
+    max-width: 50%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -216,7 +216,7 @@ textarea{
     margin: auto;
 }
 
-#due-date-input{
+#due-date-input:hover{
     cursor: text;
 }
 
@@ -244,9 +244,14 @@ textarea{
 
 /***********Media queries (phones, small devices) *************/
 @media screen and (max-width: 600px){
-    .due-date-label{
-        display:inline;
+    h3{
+        text-decoration: none;
+        padding-bottom: 0.5rem;
     }
+
+    /* .due-date-label{
+        display:inline;
+    } */
 
     #due-date-input{
         display: inline;
@@ -254,5 +259,40 @@ textarea{
         margin-right: 2rem;
     }
 
+    .color-theme-button{
+        border-radius: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    .task{
+        position:relative;
+        right: 2rem;
+    }
+
+    .sub-task{
+        position: relative;
+        right: 2rem;
+    }
+
+    .temp-input{
+        position: relative;
+        right: 2rem;
+    }
+
+    .temp-button{
+        position:relative;
+        right: 2rem;
+    }
+
+    .due-date-label{
+        visibility: hidden;
+    }
+
+    .error-message{
+        color: red;
+        position: relative;
+        bottom: 0rem;
+    }    
 }
 
